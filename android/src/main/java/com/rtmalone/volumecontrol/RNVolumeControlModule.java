@@ -7,7 +7,6 @@ import android.content.BroadcastReceiver;
 import android.content.IntentFilter;
 import android.media.AudioManager;
 
-import android.support.annotation.Nullable;
 import android.util.Log;
 
 import com.facebook.react.bridge.ActivityEventListener;
@@ -91,7 +90,7 @@ public class RNVolumeControlModule extends ReactContextBaseJavaModule
     }
   }
 
-  public void sendEvent(ReactContext reactContext, String eventName, @Nullable WritableMap params) {
+  public void sendEvent(ReactContext reactContext, String eventName, WritableMap params) {
     this.rContext.getJSModule(DeviceEventManagerModule.RCTDeviceEventEmitter.class).emit(eventName, params);
   }
 
